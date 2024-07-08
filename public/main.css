@@ -10,13 +10,14 @@ body {
   }
   
   
-  
-  .column1,
-  .column2,
-  .column3 {
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+  .column{
     display: flex;
-    justify-content: space-around;
-    width: 60%;
+    /* flex-direction: column; */
+    margin: 10px;
   }
     
     .sphere {
@@ -30,16 +31,24 @@ body {
       margin-right: 100px;
       margin-left: 100px;
     }
+    .unhide {
+      visibility: visible;
+    }
     
     .hide{
-      background: white;
+      /* background: white;
       box-shadow: none;
       background-color: #9fd3c7;
       background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
-      /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+      This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+      visibility: hidden;
     }
 
     #root{
       color:rgb(0, 34, 77);
       font-family: Tahoma, sans-serif;
+    }
+    .score{
+      text-align: center;
+      padding-bottom: 50px;
     }
