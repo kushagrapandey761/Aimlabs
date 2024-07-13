@@ -1,17 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Score from "./components/Score";
-import Spheres from "./components/Spheres";
+import Welcome from "./components/Welcome";
+import Starting from "./components/Starting";
 function App() {
-  const [score,setScore] = React.useState(0);
-  function updatescore(score){
-    setScore(score);
+  const [clicked, setClicked] = React.useState(false);
+  document.querySelector("body").addEventListener("click", () => {
+    setClicked(true);
+  });
+
+  if (clicked) {
+    return <Starting />;
+  } else {
+    return <Welcome />;
   }
-  return (
-    <div>
-      <Score score={score} />
-      <Spheres updatescore={updatescore}/>
-    </div>
-  );
 }
 export default App;

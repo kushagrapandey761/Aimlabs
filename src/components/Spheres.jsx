@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 
 function Spheres(props) {
-  var score=0;
+  var score = 0;
   let rn4 = null;
   let hasRun = false;
 
@@ -43,7 +43,6 @@ function Spheres(props) {
 
   const generateNewRandomNumber = () => {
     rn4 = Math.floor(Math.random() * 9) + 1;
-    
   };
 
   const check = () => {
@@ -65,8 +64,8 @@ function Spheres(props) {
     e.target.classList.add("hide");
     e.target.classList.remove("unhide");
     e.target.removeEventListener("click", clickHandler);
-    score=score+1;
-  props.updatescore(score);
+    score = score + 1;
+    props.updatescore(score);
   };
 
   return (
@@ -91,4 +90,3 @@ function Spheres(props) {
 }
 
 export default Spheres;
-
